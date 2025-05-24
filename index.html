@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oops! Akses Diblokir</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
       background: linear-gradient(to bottom, #000000, #7a0000);
       color: white;
@@ -15,7 +16,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
     }
@@ -33,22 +34,35 @@
       gap: 15px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 20px;
     }
-    a {
+    a.button {
       background-color: #ff0000;
       color: white;
       text-decoration: none;
       padding: 12px 20px;
       border-radius: 10px;
       font-weight: bold;
+      font-size: 1em;
       transition: 0.3s;
     }
-    a:hover {
+    a.button:hover {
       background-color: #cc0000;
     }
+    .qr-section {
+      margin-top: 25px;
+      text-align: center;
+    }
+    .qr-section img {
+      width: 200px;
+      height: 200px;
+      margin-top: 10px;
+      border: 5px solid #ff4b4b;
+      border-radius: 10px;
+    }
     footer {
-      position: absolute;
-      bottom: 15px;
+      margin-top: auto;
+      padding-top: 30px;
       font-size: 0.9em;
       color: #bbbbbb;
     }
@@ -61,17 +75,21 @@
 
   <h2 style="margin: 20px 0 10px;">Transfer ke sini:</h2>
   <div class="buttons">
-    <a href="https://link.dana.id/transfer?phone=085755375023" target="_blank">Kirim ke DANA</a>
-    <a href="https://seabank.co.id/transfer/901152986572" target="_blank">Kirim ke SeaBank</a>
-    <a href="https://shopee.co.id/shopeepay-transfer/085755375023" target="_blank">Kirim ke ShopeePay</a>
+    <a href="https://link.dana.id/transfer?phone=085755375023" class="button" target="_blank">Kirim ke DANA</a>
+    <a href="https://seabank.co.id/transfer/901152986572" class="button" target="_blank">Kirim ke SeaBank</a>
+    <a href="https://shopee.co.id/shopeepay-transfer/085755375023" class="button" target="_blank">Kirim ke ShopeePay</a>
   </div>
 
   <h2 style="margin: 30px 0 10px;">Kontak Admin:</h2>
   <div class="buttons">
-    <a href="https://wa.me/6285755375023" target="_blank">Chat WhatsApp</a>
-    <a href="mailto:mohamadadnanhadi3@gmail.com" target="_blank">Kirim Email</a>
+    <a href="https://wa.me/6285755375023" class="button" target="_blank">Chat WhatsApp</a>
+    <a href="mailto:mohamadadnanhadi3@gmail.com" class="button" target="_blank">Kirim Email</a>
   </div>
-<img src="https://api.qrserver.com/v1/create-qr-code/?data=https://wa.me/6285755375023?text=Halo%20Admin&size=200x200" alt="QR WA Admin">
+
+  <div class="qr-section">
+    <p>Atau scan QR berikut untuk langsung WhatsApp admin:</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://wa.me/6285755375023?text=Halo%20Admin&size=200x200" alt="QR WhatsApp Admin">
+  </div>
 
   <footer>by wifiteras.net</footer>
 </body>
